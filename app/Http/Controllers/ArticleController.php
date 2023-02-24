@@ -48,11 +48,9 @@ class ArticleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Request $article)
+    public function show(Article $article)
     {
-        //Muestra los articulos con el id
-        $article = Article::findOrFail($article);
-        dd($article);
+        return view('articles.show', compact('article'));
     }
 
     /**

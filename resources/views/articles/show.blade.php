@@ -9,13 +9,10 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
                     <div class="container">
-                        @foreach ($articles as $article)
                         <div>
                             <p>{{ $article->title}}</p>
-                            <a href="{{route('articles.show',$article)}}">Show</a>
+                            <p>{{ $article->body}}</p>
                         </div>
-                        @endforeach
-                        {{ $articles->links()}}
                     </div>
                 </div>
             </div>
